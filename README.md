@@ -1,6 +1,6 @@
-# mobilapptry
+# FastGökdeniz
 
-`mobilapptry`, QR kod tarama, paylaşma ve yönlendirme özellikleri sunan gelişmiş bir Flutter mobil uygulamasıdır. Uygulama, Android ve iOS platformları için hazırdır, Firebase, yerel veritabanı, paylaşım, bildirim ve kapsamlı QR işleme özellikleri içerir.
+`FastGökdeniz`, QR kod tarama, paylaşma ve yönlendirme özellikleri sunan gelişmiş bir Flutter mobil uygulamasıdır. Uygulama, Android ve iOS platformları için hazırdır, Firebase, yerel veritabanı, paylaşım, bildirim ve kapsamlı QR işleme özellikleri içerir.
 
 ## 🚀 Proje Hakkında
 
