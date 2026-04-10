@@ -1,0 +1,63 @@
+name: iOS IPA Build
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.24.0'
+        channel: 'stable'
+    
+    - name: Get dependencies
+      run: |
+        flutter pub get
+        flutter pub upgrade
+    
+    - name: Build iOS Release
+      run: flutter build ios --release --no-codesign
+    
+    - name: Create IPA
+      run: |
+        cd build/ios/iphoneos
+        mkdir -p Payload
+        mv Runner.app Payload/
+        zip -r -y ../../../app.ipa Payload/
+    
+    - name: Upload IPA Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ios-ipa
+        path: app.ipa
+        retention-days: 30
+    
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v1.0.0-${{ github.run_number }}
+        release_name: iOS Release ${{ github.run_number }}
+        draft: false
+        prerelease: false
+    
+    - name: Upload IPA to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./app.ipa
+        asset_name: mobilapptry-${{ github.run_number }}.ipa
+        asset_content_type: application/octet-stream

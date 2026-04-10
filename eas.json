@@ -1,0 +1,27 @@
+{
+  "build": {
+    "preview": {
+      "ios": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {
+      "ios": {
+        "buildType": "ipa",
+        "schemeName": "Runner",
+        "provisioning": "adhoc"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
