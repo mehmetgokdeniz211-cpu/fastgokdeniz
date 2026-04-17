@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
@@ -36,28 +36,17 @@ jobs:
         zip -r -y ../../../app.ipa Payload/
     
     - name: Upload IPA Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ios-ipa
         path: app.ipa
         retention-days: 30
     
-    - name: Create Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Release and Upload IPA
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: v1.0.0-${{ github.run_number }}
-        release_name: iOS Release ${{ github.run_number }}
+        name: iOS Release ${{ github.run_number }}
+        files: app.ipa
         draft: false
         prerelease: false
-    
-    - name: Upload IPA to Release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./app.ipa
-        asset_name: mobilapptry-${{ github.run_number }}.ipa
-        asset_content_type: application/octet-stream
