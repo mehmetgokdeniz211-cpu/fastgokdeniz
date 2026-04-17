@@ -217,6 +217,6 @@ Sürüm bilgisi güncellendi:
 
 ## Ekran Görüntüleri
 
-| Profil Sayfası | Ana Sayfa | Ayarlar |
+| Menü | Ayarlar | Profil |
 | :---: | :---: | :---: |
-| <img src="https://<a href="https://hizliresim.com/rzvfwo4"><img src="https://i.hizliresim.com/rzvfwo4.jpeg" alt="ff"></a>" alt="Proje Logosu" width="200"><img src="https://i.hizliresim.com/rzvfwo4.jpeg" | <img src"<a href="https://hizliresim.com/rzvfwo4"><img src="https://i.hizliresim.com/rzvfwo4.jpeg" alt="ff">| <img [src="https://i.hizliresim.com/ljbkuhi.jpeg]<a href="https://hizliresim.com/adb2p7g"><img src="https://i.hizliresim.com/adb2p7g.jpeg" alt="ff"> |
+| <img src="https://i.hizliresim.com/jnosz4e.jpeg" width="200"> | <img src="https://i.hizliresim.com/ljbkuhi.jpeg" width="200"> | <img src="https://i.hizliresim.com/dqxfqh3.jpeg" width="200"> |
