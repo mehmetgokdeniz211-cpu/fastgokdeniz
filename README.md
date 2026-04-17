@@ -219,4 +219,4 @@ Sürüm bilgisi güncellendi:
 
 | Menü | Ayarlar | Profil |
 | :---: | :---: | :---: |
-| <img src="https://i.hizliresim.com/jnosz4e.jpeg" width="200"> | <img src="https://i.hizliresim.com/ljbkuhi.jpeg" width="200"> | <img src="https://i.hizliresim.com/dqxfqh3.jpeg" width="200"> |
+| <img src="https://i.hizliresim.com/jnosz4e.jpeg" width="200"> | <img src="https://i.hizliresim.com/79m6lo2.jpeg" width="200"> | <img src="https://i.hizliresim.com/rzvfwo4.jpeg" width="200"> |
